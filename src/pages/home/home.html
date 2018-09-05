@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic Multi file upload
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <input type="file" multiple #myfiles style="display:none" (change)="onSelectChanged($event)">
+  <button ion-button (click)="myfiles.click()">select files</button>
+  <div class="images">
+    <ion-row>
+      <ion-col col-3 *ngFor="let img of fileList">
+        {{img?.name }}
+        <div [showImage]="img"></div>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>

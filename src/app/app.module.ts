@@ -6,15 +6,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ComponentsModule } from '../components/components.module';
+import { DirectivesModule } from '../directives/directives.module';
+import { ShowImageDirective } from '../directives/show-image/show-image';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    DirectivesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
