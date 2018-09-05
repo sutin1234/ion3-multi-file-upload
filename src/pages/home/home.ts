@@ -14,7 +14,6 @@ export class HomePage {
   onSelectChanged(evt){
     const files = evt.target.files;
     this.fileList = files;
-    console.log(this.fileList);
   }
 
 }
